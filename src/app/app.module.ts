@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SwaggerUiComponent } from './swagger-ui/swagger-ui.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SwaggerUiComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
