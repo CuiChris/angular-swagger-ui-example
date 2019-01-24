@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SwaggerUiComponent } from './swagger-ui.component';
+import { SwaggerComponent } from './swagger.component';
 
-describe('SwaggerUiComponent', () => {
-  let component: SwaggerUiComponent;
-  let fixture: ComponentFixture<SwaggerUiComponent>;
+describe('SwaggerComponent', () => {
+  let component: SwaggerComponent;
+  let fixture: ComponentFixture<SwaggerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SwaggerUiComponent ]
+      declarations: [ SwaggerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SwaggerUiComponent);
+    fixture = TestBed.createComponent(SwaggerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

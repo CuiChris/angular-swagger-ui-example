@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SwaggerUiComponent } from './swagger-ui/swagger-ui.component';
+import { SwaggerComponent } from './swagger/swagger.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'specifications',
-    component: SwaggerUiComponent
+    component: SwaggerComponent
   },
   {
     path: '**',

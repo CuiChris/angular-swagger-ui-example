@@ -1,0 +1,101 @@
+openapi: 3.0.1
+info:
+  title: Datapak model API
+  description: datapak spec generted by Swagger Inspector
+  version: '0.1'
+servers:
+  - url: 'http://menus-api.syd.dev.ifmsystems.com:8080'
+paths:
+  /datapak/services/model/get.json:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: market
+          in: query
+          schema:
+            type: string
+          example: NL
+        - name: modelId
+          in: query
+          schema:
+            type: string
+          example: '57206'
+        - name: subscriptionAssignment
+          in: query
+          schema:
+            type: string
+          example: DYN00000000006431B
+        - name: locale
+          in: query
+          schema:
+            type: string
+          example: en-gb
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  modelId:
+                    type: integer
+                  familyCode:
+                    type: string
+                  imageUrl:
+                    type: string
+                  franchiseCode:
+                    type: string
+                  description:
+                    type: string
+                  attributes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        description:
+                          type: string
+                        type:
+                          type: string
+                        value:
+                          type: string
+                  text:
+                    type: string
+              examples:
+                '0':
+                  value: >-
+                    {"modelId": 57206,"familyCode": "Z33D","franchiseCode":
+                    "NISS","imageUrl": "350z-z33","attributes": [{"type":
+                    "modelCode","description": "Model Code","value":
+                    "GLJALSYZ33EGA"},{"type": "franchiseCode","description":
+                    "Franchise Code","value": "NISS"},{"type":
+                    "dateRanges","description": "Range Dates","value": "05/2005
+                    - 01/2007"},{"type": "description","description":
+                    "Description","value": "Z33 350Z Pack 2DR Coupe 3.5L V6 6sp
+                    Manual"},{"type": "dateFrom","description": "Date
+                    From","value": "05/2005"},{"type": "dateTo","description":
+                    "Date To","value": "01/2007"},{"type":
+                    "bodyType","description": "Body Type/Style","value":
+                    "2DR"},{"type": "bodyStyle","description": "Body
+                    Style","value": "COUPE"},{"type": "series","description":
+                    "Series","value": "PACK"},{"type": "drive","description":
+                    "Drive","value": "R"},{"type": "engineCode","description":
+                    "Engine Code","value": "VQ35DE"},{"type":
+                    "transmissionCode","description": "Trans Code","value":
+                    "6MT"},{"type": "category","description": "Model
+                    Category","value": "CAR"},{"type":
+                    "transmission","description": "Transmission Type","value":
+                    "M"},{"type": "gears","description": "Gears","value": "3.5L
+                    V6 6sp Manual"},{"type": "cylinders","description":
+                    "Cylinders","value": "V6"},{"type":
+                    "driverPosition","description": "Driver Position","value":
+                    "LHD"},{"type": "countryCode","description": "Country
+                    Code","value": "EU"},{"type": "catalogCode","description":
+                    "Catalog Code","value": "Z33"},{"type":
+                    "fuelType","description": "Fuel Type","value":
+                    "PETROL"},{"type": "vinPrefix","description": "VIN
+                    Prefix","value": "JN1GAAZ33U0"},{"type":
+                    "engineSize","description": "Engine Size","value":
+                    "3.5"}],"text": "Z33 350Z Pack 2DR Coupe 3.5L V6 6sp
+                    Manual","description": "Z33 350Z Pack 2DR Coupe 3.5L V6 6sp
+                    Manual"}

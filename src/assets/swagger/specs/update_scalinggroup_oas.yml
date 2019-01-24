@@ -1,0 +1,59 @@
+openapi: 3.0.1
+info:
+  title: Update Auto-Scaling Group
+  description: Lambda services for updating number of instances in auto-scaling group.
+  version: '0.1'
+servers:
+  - url: 'https://alb.isotopesco.de'
+paths:
+  /services/infrastructure/update-scalinggroup:
+    get:
+      description: Terminate or start instances in auto-scaling group.
+      parameters:
+        - name: asgName
+          in: query
+          schema:
+            type: string
+          required: true
+          description: auto scaling group name
+          example: asg-menus-api-master-ServerGroup-A5Z9NOTO1VQ0
+        - name: instanceCount
+          in: query
+          schema:
+            type: string
+            enum:
+              - '0'
+              - '1'
+          required: true
+          description: number of instances in auto sacling group
+          example: '1'
+        - name: classifier
+          in: query
+          schema:
+            type: string
+          required: true
+          description: mandatory for running this service
+          example:
+      responses:
+        '200':
+          description: Always return 200, check status field
+          content:
+            application/json; charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    enum:
+                      - 'Successful'
+                      - 'Skip'
+                      - 'Failed'
+                      - 'ClientError'
+                      - 'Exception'
+                  message:
+                    type: string
+              examples: {}
+      servers:
+        - url: 'https://alb.isotopesco.de'
+    servers:
+      - url: 'https://alb.isotopesco.de'
