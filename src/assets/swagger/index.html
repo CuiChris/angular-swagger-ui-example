@@ -39,11 +39,11 @@
     window.onload = function() {
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
-		urls: [
-		{name:"PetStore", url:"https://petstore.swagger.io/v2/swagger.json"},
-		{name:"Sunrise and sunset times", url:"specs/openapi_sunrise_sunset.yml"},
-		{name:"Open weather map", url:"specs/openapi_openweathermap.yml"},
-		],
+        urls: [
+          {name:"PetStore", url:"https://petstore.swagger.io/v2/swagger.json"},
+          {name:"Sunrise and sunset times", url:"specs/openapi_sunrise_sunset.yml"},
+          {name:"Open weather map", url:"specs/openapi_openweathermap.yml"},
+        ],
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
